@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body {
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    background-color: #0f0f0f;
+    overflow: hidden; 
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sp {
+    font-size: 28px !important;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
+    -webkit-animation: fadeIn 1s forwards 2s; 
+}
+
+span {
+    color: #32cd32; 
+}
+
+#Linktree {
+    width: 500px; 
+    min-height: 100vh; 
+    background-image: url('img3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: changeBackground 4s forwards 4s; 
+    -webkit-animation: changeBackground 4s forwards 4s; 
+}
+
+.overlay-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.profile-img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 16px;
+    z-index: 10;
+    border: 3px solid white;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+    -webkit-animation: fadeIn 1s forwards 1s; 
+}
+
+.w-full {
+    width: 100%; 
+    padding: 12px 16px;
+    margin: 8px 0; 
+    text-align: left; 
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    font-size: 16px; 
+    font-weight: bold;
+    text-decoration: none; 
+    z-index: 2; 
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards 3s;
+    -webkit-animation: fadeIn 1s forwards 3s; 
+}
+
+.icon-bawah {
+    animation: fadeIn 1s forwards 3s;
+    -webkit-animation: fadeIn 1s forwards 3s; 
+    opacity: 0;
+}
+
+.w-full:hover {
+    background-color: #cccccc;
+    transform: scale(1.05);
+}
+
+.logo {
+    width: 24px; 
+    height: 24px;
+    object-fit: contain; 
+    margin-right: 8px;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@-webkit-keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes changeBackground {
+    to { background-color: #000; }
+}
+
+@-webkit-keyframes changeBackground { 
+    to { background-color: #000; }
+}
+
+@media (max-width: 360px) {
+    body {
+        align-items: center;
+    }
+
+    #Linktree {
+        width: 100%; 
+    }
+}
